@@ -1,0 +1,59 @@
+// sublime config instructions: https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48
+// NOTE you may need /*eslint no-var: 0, strict: [2, "global"] */ comment for es5 files
+// Known issues:
+// - coma-spacing will be reported for `${a}, b` https://github.com/babel/babel-eslint/issues/31
+//   - you can escape comma as a workaround: `${a}\, b`
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "fetch": true, // TODO remove after fixing https://github.com/matthew-andrews/isomorphic-fetch/issues/16
+
+    // for tests
+    "describe": false,
+    "expect": false,
+    "it": false
+  },
+  "rules": {
+    // possible errors
+    "no-comma-dangle": 0, // babel will care of it
+    "no-dupe-keys": 0, // bug in babel-eslint, incorrectly handles {{...a.x, ...a.y}} https://github.com/babel/babel-eslint/issues/16
+
+    // best practices
+    "eqeqeq": 0,
+    "no-eval": 0,
+    "no-self-compare": 2,
+    "no-unused-expressions": 0, // to allow f && f() constructions
+    "no-unused-vars": 0, // bug in babel-eslint, doesn't understand exports https://github.com/babel/babel-eslint/issues/8
+    "no-use-before-define": 0, // NOTE only for old code which doesn't use classes
+    "wrap-iife": 2,
+    "yoda": [2, "never"],
+
+    // strict mode
+    "strict": [2, "never"],
+
+    // variables
+    "no-shadow": 0, // to allow shadowing of commonly used vars, e.g. err, cb, etc.
+
+    // node.js
+    "no-process-exit": 0,
+
+    // stylistic
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+    "comma-style": [2, "last"],
+    "eol-last": 2,
+    "new-cap": [2, {"newIsCap": true, "capIsNew": false}],
+    "no-lonely-if": 1,
+    "no-underscore-dangle": 0,
+    "quotes": [2, "single", "avoid-escape"],
+    //"semi": [2, "never"],
+    "space-after-keywords": [2, "always"],
+    "space-before-blocks": [2, "always"],
+
+    // es6
+    "no-var": 2
+  }
+}

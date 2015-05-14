@@ -1,0 +1,28 @@
+<div id="group-list">
+{{greeting}}
+    <div *for="#group of groups">
+        <table class="table">
+            <tr>
+                <td><strong>{{group.name}}</strong></td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="table sortable">
+                        <tbody>
+                            <tr *for="#agent of group.agents">
+                                <td><strong>{{agent.name}}</strong></td>
+                                <td>{{agent.ip}}</td>
+                                <td>Running</td>
+                                <td>
+                                    <div class="btn-group btn-group-xs" role="group" aria-label="Small button group">
+                                        <button type="button" class="btn btn-primary">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

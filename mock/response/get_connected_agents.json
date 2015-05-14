@@ -1,0 +1,17 @@
+{
+    "command": "get_connected_agents",
+    "agents": [
+        {
+            "name": "agent_name 1",
+            "ip": "127.0.0.1"
+        },
+        {
+            "name": "agent_name 2",
+            "ip": "127.0.0.2"
+        },
+        {
+            "name": "agent_name 1",
+            "ip": "127.0.0.3"
+        }
+    ]
+}

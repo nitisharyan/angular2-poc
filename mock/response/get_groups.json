@@ -1,0 +1,31 @@
+{
+    "command": "get_groups",
+    "groups": [
+        {
+            "name": "Group 1",
+            "agents": [
+                {
+                    "name": "agent_name 2",
+                    "ip": "127.0.0.2"
+                },
+                {
+                    "name": "agent_name 1",
+                    "ip": "127.0.0.3"
+                }
+            ]
+        },
+        {
+            "name": "Group 2",
+            "agents": [
+                {
+                    "name": "agent_name 3",
+                    "ip": "127.0.0.3"
+                },
+                {
+                    "name": "agent_name 4",
+                    "ip": "127.0.0.4"
+                }
+            ]
+        }
+    ]
+}

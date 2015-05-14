@@ -1,0 +1,46 @@
+body {
+  background: #eaeaea url("/dist/img/rhino.svg") no-repeat 50% 50%;
+  background-size: 50%;
+  color: #4d4d4d;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+/* Header */
+
+.logo {
+    text-shadow: 1px 0 0 #FFFFFF;
+    font-size: 100px;
+    font-weight: 100;
+    text-align: center;
+    color: #BCBCBC;
+}
+
+/* Sortable */
+.placeholder {
+    height: 40px !important;
+    border: 1px dashed #CCC !important;
+}
+.placeholder td {
+    border: 1px dashed #CCC !important;
+    height: 40px !important;
+}
+.table > tbody > .placeholder > td {
+    border: 1px dashed #CCC !important;
+}
+
+.dragged {
+    position: absolute;
+    z-index: 2;
+}
+.table {
+  margin-bottom: 0;
+}
+
+th, td {
+    overflow: hidden;
+    width: 100%;
+}

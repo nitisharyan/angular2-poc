@@ -1,0 +1,23 @@
+<table id="agent-list" class="table sortable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>IP</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *for="#agent of agents">
+            <td><strong>{{agent.name}}</strong></td>
+            <td>{{agent.ip}}</td>
+            <td>Running</td>
+            <td>
+                <div class="btn-group btn-group-xs" role="group" aria-label="Small button group">
+                    <button type="button" class="btn btn-primary" (click)="edit(agent.name)">Edit</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<rhino-agent></rhino-agent>
